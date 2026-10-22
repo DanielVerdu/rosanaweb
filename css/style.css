@@ -9798,6 +9798,123 @@ a.text-dark:hover, a.text-dark:focus {
   object-fit: auto;
 }
 
+/* ENLACES DE COMPRA */
+.book-purchase {
+  width: 300px;
+  max-width: 100%;
+  margin: 24px auto 32px;
+  text-align: left;
+}
+
+.book-purchase-title {
+  margin-bottom: 14px;
+  color: #65483f;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.book-store-link {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) 14px;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--store-accent);
+  border-radius: 8px;
+  background: var(--store-background);
+  color: var(--store-text);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.book-store-link strong,
+.book-store-link small {
+  display: block;
+}
+
+.book-store-link strong {
+  font-size: 0.85rem;
+}
+
+.book-store-link small {
+  margin-top: 3px;
+  font-size: 0.73rem;
+}
+
+.book-store-link > i:first-child {
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.book-store-link > i:last-child {
+  font-size: 0.75rem;
+}
+
+.book-store-amazon {
+  --store-background: #ff9900;
+  --store-hover: #ffad33;
+  --store-text: #232f3e;
+  --store-accent: #232f3e;
+}
+
+.book-store-corte-ingles {
+  grid-template-columns: 44px minmax(0, 1fr) 14px;
+  --store-background: #006b3f;
+  --store-hover: #005332;
+  --store-text: #ffffff;
+  --store-accent: #006b3f;
+}
+
+.book-store-logo {
+  display: block;
+  width: 44px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 4px;
+  background: #ffffff;
+  object-fit: contain;
+}
+
+.book-store-casa-libro {
+  --store-background: #004d43;
+  --store-hover: #003c34;
+  --store-text: #ffffff;
+  --store-accent: #f5ce3e;
+}
+
+.book-store-casa-libro > i {
+  color: var(--store-accent);
+}
+
+.book-store-link:hover {
+  background: var(--store-hover);
+  color: var(--store-text);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+.book-store-link:focus-visible {
+  outline: 3px solid var(--store-background);
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .book-purchase {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-store-link {
+    transition: none;
+  }
+  .book-store-link:hover {
+    transform: none;
+  }
+}
+
 /* GALERÍA */
 .img-gallery-main {
   height: 1300px;
